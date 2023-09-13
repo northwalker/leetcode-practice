@@ -1,3 +1,3 @@
 # LeetCode Practice
 
-Just for notice.
+Just for record.

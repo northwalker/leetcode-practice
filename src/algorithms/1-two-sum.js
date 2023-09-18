@@ -1,6 +1,6 @@
-var twoSum = function (nums, target) {
+const twoSum = function (nums, target) {
   // Hash Map ver.
-  // 將每一個數字與target的差值加入map儲存，新的數字若相符即回傳
+  // 將每一個數字與 target 的差值加入 map 儲存，新的數字若相符即回傳
   var map = {};
   for (var i = 0; i < nums.length; i++) {
     if (map[nums[i]] || map[nums[i]] === 0) return [map[nums[i]], i];

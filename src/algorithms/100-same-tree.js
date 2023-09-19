@@ -11,19 +11,12 @@
  * @param {TreeNode} q
  * @return {boolean}
  */
-var isSameTree = function (p, q) {
-  let resultP = [],
-    resultQ = [];
-  if (p) traversal(p, resultP);
-  if (q) traversal(q, resultQ);
-  // console.log('resultP', resultP.join(''), 'resultQ', resultQ.join(''));
-  return resultP.join('') === resultQ.join('');
-};
-
-const traversal = function (root, result) {
-  result.push(root.val);
-  if (root.left) traversal(root.left, result);
-  else result.push('-');
-  if (root.right) traversal(root.right, result);
-  else result.push('-');
+const isSameTree = function (p, q) {
+  if (!q && !p) return true;
+  if (!q || !p) return false;
+  return (
+    q.val === p.val &&
+    isSameTree(p.left, q.left) &&
+    isSameTree(p.right, q.right)
+  );
 };

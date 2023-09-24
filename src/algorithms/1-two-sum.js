@@ -1,10 +1,11 @@
 const twoSum = function (nums, target) {
   // Hash Map ver.
   // 將每一個數字與 target 的差值加入 map 儲存，新的數字若相符即回傳
-  var map = {};
+  let map = new Map();
   for (var i = 0; i < nums.length; i++) {
-    if (map[nums[i]] || map[nums[i]] === 0) return [map[nums[i]], i];
-    else map[target - nums[i]] = i;
+    const key = nums[i];
+    if (map.has(key)) return [map.get(key), i];
+    else map.set(target - key, i);
   }
 };
 

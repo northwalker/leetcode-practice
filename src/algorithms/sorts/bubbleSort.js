@@ -10,7 +10,7 @@ const bubbleSort = function (arr, fn) {
       }
     }
   }
-  return arr;
+  return arr; // For console.log, it's in-place sorting
 };
 
 // console.log(JSON.stringify(bubbleSort([5, 4, 1, 2, 3], (x) => x)));

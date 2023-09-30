@@ -6,6 +6,7 @@ const shuffle = function (array) {
   }
 };
 
+ // For console.log, it's in-place sorting
 let test1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 shuffle(test1);
 console.log(JSON.stringify(test1));
